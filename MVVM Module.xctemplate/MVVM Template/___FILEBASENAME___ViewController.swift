@@ -4,26 +4,26 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___: UIViewController {
 
-    var viewModel: ___VARIABLE_productName:identifier___ViewModelProtocol
+    var viewModel: ___VARIABLE_productName:identifier___ViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
-        viewModel.viewDidLoad()
+        viewModel.viewModelDidLoad()
     }
     
-    override func viewWillAppear() {
-        super.viewWillAppear()
-        viewModel.viewWillAppear()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.viewModelWillAppear()
     }
     
-    fileprivate func setupViewModel() {
+    fileprivate func bindViewModel() {
 
         viewModel.output = { [unowned self] output in
             //handle all your bindings here
             switch output {
             default:
-                <#code#>
+                break
             }
         }
     }

@@ -2,21 +2,25 @@
 
 import Foundation
 
-typealias ___FILEBASENAMEASIDENTIFIER___Output = (___FILEBASENAMEASIDENTIFIER___.Output) -> Void
+typealias ___FILEBASENAMEASIDENTIFIER___Output = (___FILEBASENAMEASIDENTIFIER___Impl.Output) -> Void
 
-protocol ___FILEBASENAMEASIDENTIFIER___Protocol {
-    var output: ___VARIABLE_productName:identifier___Output? { get set}
+protocol ___FILEBASENAMEASIDENTIFIER___Input {
+    
+}
+
+protocol ___FILEBASENAMEASIDENTIFIER___ {
+    var output: ___FILEBASENAMEASIDENTIFIER___Output? { get set}
     
     func viewModelDidLoad()
     func viewModelWillAppear()
 }
 
-class ___FILEBASENAMEASIDENTIFIER___: ___FILEBASENAMEASIDENTIFIER___Protocol {
+class ___FILEBASENAMEASIDENTIFIER___Impl: ___FILEBASENAMEASIDENTIFIER___, ___FILEBASENAMEASIDENTIFIER___Input {
 
     private let router: ___VARIABLE_productName:identifier___Router
     var output: ___FILEBASENAMEASIDENTIFIER___Output?
     
-    init(with___VARIABLE_productName:identifier___ router: ___VARIABLE_productName:identifier___Router) {
+    init(router: ___VARIABLE_productName:identifier___Router) {
         self.router = router
     }
     
@@ -34,6 +38,6 @@ class ___FILEBASENAMEASIDENTIFIER___: ___FILEBASENAMEASIDENTIFIER___Protocol {
     }
 }
 
-extension ___FILEBASENAMEASIDENTIFIER___ {
+extension ___FILEBASENAMEASIDENTIFIER___Impl {
 
 }

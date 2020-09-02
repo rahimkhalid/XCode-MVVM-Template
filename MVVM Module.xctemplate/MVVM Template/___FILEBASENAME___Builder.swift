@@ -1,6 +1,7 @@
 //  ___FILEHEADER___
 
 import Foundation
+import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___ {
 
@@ -9,7 +10,7 @@ class ___FILEBASENAMEASIDENTIFIER___ {
         let storyboard = UIStoryboard(name: "___VARIABLE_productName:identifier___", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: "___VARIABLE_productName:identifier___ViewController") as! ___VARIABLE_productName:identifier___ViewController
         let coordinator = ___VARIABLE_productName:identifier___Router(navigationController: navigationController)
-        let viewModel = ___VARIABLE_productName:identifier___ViewModel(router: coordinator)
+        let viewModel = ___VARIABLE_productName:identifier___ViewModelImpl(router: coordinator)
 
         viewController.viewModel = viewModel
         

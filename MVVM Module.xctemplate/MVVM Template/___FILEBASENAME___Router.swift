@@ -1,6 +1,7 @@
 //  ___FILEHEADER___
 
 import Foundation
+import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___ {
     private weak var navigationController: UINavigationController?
